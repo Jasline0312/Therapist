@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:therapist/custom_app_bar.dart';
 import 'MainPage.dart';
 import 'components.dart';
 import 'emotional_guidance.dart';
@@ -13,7 +14,6 @@ class HomePage extends StatefulWidget {
 
 //set background image and buttons
 class _HomePageState extends State<HomePage> {
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,65 +28,69 @@ class _HomePageState extends State<HomePage> {
             ),
             child: Column(
               children: [
-                Components.pageTitleHeader('My Journey'),
+                CustomAppBar(
+                  title: 'My Journey',
+                ),
+                // Components.pageTitleHeader('My Journey'),
                 Expanded(
                   flex: 12,
                   child: SingleChildScrollView(
-                    child: Column(
+                    child: Column(children: [
+                      // Components.pageHeaderMenu(context, true),
+                      SizedBox(height: 0),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Components.pageHeaderMenu(context, true),
-                          SizedBox(height: 0),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                      (context),
-                                      MaterialPageRoute(
-                                        builder: (context) => const MainPage(pageIndex: 2)
-                                      ),
-                                    );
-                                  },
-                                  child: Image(
-                                    image: AssetImage(
-                                        "lib/assets/emotional_guidance_button.png"),
-                                    width: 180,
-                                  ),
-                                ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const MainPage(pageIndex: 2)),
+                                );
+                              },
+                              child: Image(
+                                image: AssetImage(
+                                    "lib/assets/emotional_guidance_button.png"),
+                                width: 180,
                               ),
-                            ],
+                            ),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Image(
-                                image: AssetImage(
-                                    "lib/assets/journal_button.png"),
-                                width: 180,),
-                              Image(
-                                image: AssetImage(
-                                    "lib/assets/mood_chart_button.png"),
-                                width: 180,),
-                            ],
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image(
+                            image: AssetImage("lib/assets/journal_button.png"),
+                            width: 180,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Image(
-                                image: AssetImage(
-                                    "lib/assets/self_reflective_button.png"),
-                                width: 180,),
-                              Image(
-                                image: AssetImage(
-                                    "lib/assets/positive_vibes_button.png"),
-                                width: 180,),
-                            ],
+                          Image(
+                            image:
+                                AssetImage("lib/assets/mood_chart_button.png"),
+                            width: 180,
                           ),
-                        ]
-                    ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image(
+                            image: AssetImage(
+                                "lib/assets/self_reflective_button.png"),
+                            width: 180,
+                          ),
+                          Image(
+                            image: AssetImage(
+                                "lib/assets/positive_vibes_button.png"),
+                            width: 180,
+                          ),
+                        ],
+                      ),
+                    ]),
                   ),
                 ),
               ],
