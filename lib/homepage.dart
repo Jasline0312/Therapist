@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
                   child: SingleChildScrollView(
                     child: Column(children: [
                       // Components.pageHeaderMenu(context, true),
-                      SizedBox(height: 0),
+                      SizedBox(height: 25),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
