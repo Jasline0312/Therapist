@@ -36,13 +36,9 @@ class _EmotionalGuidancePageState extends State<EmotionalGuidancePage> {
                     child: Column(children: [
                       TextButton(
                         onPressed: () async{
-                          final url='https://maic.qld.gov.au/wp-content/uploads/2016/07/DASS-21.pdf';
-                          if (await canLaunch(url)){
+                          final String url='https://maic.qld.gov.au/wp-content/uploads/2016/07/DASS-21.pdf';
                             await launch(
-                                url,
-                                forceWebView: true,
-                                enableJavaScript: true);
-                          }
+                                url);
                         },
                         child: const Text(
                           'SELF TEST HERE ',

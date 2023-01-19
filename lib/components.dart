@@ -15,7 +15,7 @@ class Components {
           title,
           textAlign: TextAlign.center,
           style: TextStyle(
-              fontSize: 25,
+              fontSize: 22,
               color: Colors.black,
               fontFamily: 'Lucida',
               decoration: TextDecoration.none,

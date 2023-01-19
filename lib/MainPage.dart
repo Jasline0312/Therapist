@@ -9,6 +9,8 @@ import 'fear_main.dart';
 import 'stress_main.dart';
 import 'anxiety_main.dart';
 import 'deep_breathing.dart';
+import 'package:therapist/positive_vibes.dart';
+import 'images_vibes.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -92,7 +94,9 @@ class _MainPageState extends State<MainPage> {
       DepressMainPage(),
       StressMainPage(),
       AnxietyMainPage(),
-      CountDownTimer(),// Add new page here
+      CountDownTimer(),
+      PositiveVibesPage(),
+      ImagesVibesPage(),// Add new page here
     ];
   }
 }
