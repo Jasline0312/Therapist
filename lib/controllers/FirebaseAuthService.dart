@@ -1,9 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FirebaseAuthService{
   static final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  static final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
 
   static Future<void> signOut(BuildContext context) async {
     await firebaseAuth.signOut().then((value) => {
@@ -35,6 +37,10 @@ class FirebaseAuthService{
     try {
       UserCredential userCredential = await firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
       if(userCredential.user != null){
+        await firebaseFirestore.collection(firebaseAuth.currentUser!.uid).add({
+          'username' : username
+        });
+
         return null;
       }
       // ScaffoldMessenger.of(context).showSnackBar(

@@ -59,17 +59,17 @@ class _LoginState extends State<Login> {
             );
           },
           additionalSignupFields: [
-            // UserFormField(
-            //     keyName: 'Username',
-            //     icon: Icon(Icons.person),
-            //     displayName: 'Username',
-            //     userType: LoginUserType.name,
-            //     fieldValidator: (value){
-            //       if(value == ''){
-            //         return 'Username cannot be empty';
-            //       }
-            //     }
-            // ),
+            UserFormField(
+                keyName: 'Username',
+                icon: Icon(Icons.person),
+                displayName: 'Username',
+                userType: LoginUserType.name,
+                fieldValidator: (value){
+                  if(value == ''){
+                    return 'Username cannot be empty';
+                  }
+                }
+            ),
           ],
         ),
       ),
