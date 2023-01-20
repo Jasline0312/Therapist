@@ -34,7 +34,8 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+    child: Scaffold(
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -65,7 +66,7 @@ class _DashboardPageState extends State<DashboardPage> {
               onPressed: (){
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_){
+                    builder: (context){
                       return const LoginPage();
                     }
                   )
@@ -81,6 +82,7 @@ class _DashboardPageState extends State<DashboardPage> {
           ],
         ),
       ),
+    ),
     );
   }
 }

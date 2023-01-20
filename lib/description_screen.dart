@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:therapist/MainPage.dart';
+import 'package:therapist/login_page.dart';
 import 'homepage.dart';
 
 // set description screen with buttons
@@ -102,7 +103,7 @@ class welcomeScreen2 extends StatelessWidget {
                   GestureDetector(
                     onTap: (){
                       Navigator.push((context), MaterialPageRoute(
-                          builder: (context) => const MainPage()),
+                          builder: (context) => const LoginPage()),
                       );
                     },
                     child: Image(

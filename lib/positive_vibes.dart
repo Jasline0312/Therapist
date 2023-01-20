@@ -80,7 +80,7 @@ class _PositiveVibesPageState extends State<PositiveVibesPage> {
                                     (context),
                                     MaterialPageRoute(
                                     builder: (context) =>
-                                const MainPage(pageIndex: 12)),
+                                const MainPage(pageIndex: 13)),
                                 );
                               },
                               child: Image(

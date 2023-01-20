@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:therapist/login_page.dart';
 
 import 'MainPage.dart';
 import 'controllers/FirebaseAuthService.dart';
@@ -19,7 +20,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+    child: Scaffold(
       body: SizedBox.expand(
         child: Container(
           decoration: const BoxDecoration(
@@ -33,20 +35,20 @@ class _SignUpPageState extends State<SignUpPage> {
               children: [
                 const SizedBox(height: 20),
                 const Text(
-                  'Sign In',
+                  'Sign Up',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Image.asset(
                   'lib/assets/signup.png',
-                  height: 320,
+                  height: 250,
                 ),
                 Container(
                   color: Colors.white,
-                  height: MediaQuery.of(context).size.height / 1.8,
-                  padding: const EdgeInsets.all(16.0),
+                  height: MediaQuery.of(context).size.height / 1.7,
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,7 +98,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextButton(
                           child: Image.asset(
                             'lib/assets/sign_up_button.png',
-                            height: 80,
+                            height: 50,
                             width: 200,
                           ),
                           onPressed: () async {
@@ -118,16 +120,33 @@ class _SignUpPageState extends State<SignUpPage> {
                             }
                           },
                         ),
-                      )
+                      ),
+
+                    Center(
+                      child:TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              (context),
+                              MaterialPageRoute(
+                        builder: (context) =>
+                        const LoginPage()),
+                  );
+          },
+                      child: const Text(
+                      'Already have an account? ',
+                      style: TextStyle(fontSize: 15, color: Color.fromRGBO(247,129,90,50),),
+            ),
+          ),
+                    ),
                     ],
                   ),
                 ),
-
               ],
             ),
           ),
         ),
       ),
+    ),
     );
   }
 }

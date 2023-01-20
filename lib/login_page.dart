@@ -19,7 +19,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+    child: Scaffold(
       body: SizedBox.expand(
         child: Container(
           decoration: const BoxDecoration(
@@ -35,17 +36,18 @@ class _LoginPageState extends State<LoginPage> {
                 const Text(
                   'Sign In',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Image.asset(
                   'lib/assets/login.png',
-                  height: 320,
+                  height: 250,
                 ),
                 Container(
                   color: Colors.white,
-                  padding: const EdgeInsets.all(16.0),
+                  height: MediaQuery.of(context).size.height / 1.7,
+                  padding: const EdgeInsets.all(20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -92,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: TextButton(
                           child: Image.asset(
                             'lib/assets/login_button.png',
-                            height: 80,
+                            height: 50,
                             width: 200,
                           ),
                           onPressed: () async {
@@ -120,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                         child: TextButton(
                           child: Image.asset(
                             'lib/assets/sign_up_button.png',
-                            height: 80,
+                            height: 50,
                             width: 200,
                           ),
                           onPressed: (){
@@ -142,6 +144,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
+    ),
     );
   }
 }

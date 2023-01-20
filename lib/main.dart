@@ -11,12 +11,12 @@ void main() async {
 
   runApp(
       MaterialApp(
-        initialRoute: '/main',
+        initialRoute: '/',
         debugShowCheckedModeBanner: false,
         routes: {
           '/':(context) =>const DescriptionScreen(),
           '/main' : (context) => const MainPage(),
-          '/login' : (context) => const LoginPage(),
+          '/login' : (context) => const LoginPage()
         },
       )
   );

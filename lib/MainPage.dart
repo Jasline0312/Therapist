@@ -11,6 +11,7 @@ import 'anxiety_main.dart';
 import 'deep_breathing.dart';
 import 'package:therapist/positive_vibes.dart';
 import 'images_vibes.dart';
+import 'package:therapist/DashboardPage.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -96,7 +97,8 @@ class _MainPageState extends State<MainPage> {
       AnxietyMainPage(),
       CountDownTimer(),
       PositiveVibesPage(),
-      ImagesVibesPage(),// Add new page here
+      ImagesVibesPage(),
+      DashboardPage(),// Add new page here
     ];
   }
 }
