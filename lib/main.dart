@@ -11,7 +11,7 @@ void main() async {
 
   runApp(
       MaterialApp(
-        initialRoute: '/login',
+        initialRoute: '/main',
         debugShowCheckedModeBanner: false,
         routes: {
           '/':(context) =>const DescriptionScreen(),
