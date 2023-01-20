@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:therapist/controllers/firestore_controller.dart';
 import 'package:therapist/custom_app_bar.dart';
 import 'MainPage.dart';
 import 'components.dart';
@@ -14,6 +15,23 @@ class HomePage extends StatefulWidget {
 
 //set background image and buttons
 class _HomePageState extends State<HomePage> {
+
+  String? username;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getUsernameFromFirestore();
+  }
+
+  Future<void> getUsernameFromFirestore() async {
+    String? tempUsername = await FirestoreController.getUsername();
+    setState(() {
+      username = tempUsername;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -37,7 +55,20 @@ class _HomePageState extends State<HomePage> {
                   child: SingleChildScrollView(
                     child: Column(children: [
                       // Components.pageHeaderMenu(context, true),
-                      SizedBox(height: 25),
+                      const SizedBox(height: 25),
+                      username != null ? Align(
+                        alignment: Alignment.topLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20, bottom: 20),
+                          child: Text(
+                            'Hi, $username',
+                            style: const TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        ),
+                      ) : Container(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

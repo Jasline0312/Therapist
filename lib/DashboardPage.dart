@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:therapist/controllers/FirebaseAuthService.dart';
+import 'package:therapist/login.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -13,7 +16,31 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dashboard'),
+        title: const Text('Dashboard'),
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            FirebaseAuth.instance.currentUser == null ? TextButton(
+              child: const Text('Login'),
+              onPressed: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_){
+                      return Login();
+                    }
+                  )
+                );
+              },
+            ) : Container(),
+            TextButton(
+              child: Text('Log out'),
+              onPressed: (){
+                FirebaseAuthService.signOut(context);
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

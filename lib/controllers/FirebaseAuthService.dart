@@ -11,7 +11,7 @@ class FirebaseAuthService{
     await firebaseAuth.signOut().then((value) => {
       // TODO: After sign out stuffs
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Sign out successfully!'))
+          const SnackBar(content: Text('Sign out successfully!'))
       )
     });
   }
