@@ -6,8 +6,9 @@ import 'ConfirmExitDialog.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String title;
+  final bool? showBackButton;
 
-  const CustomAppBar({super.key, required this.title});
+  const CustomAppBar({super.key, required this.title, this.showBackButton = true});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,20 @@ class CustomAppBar extends StatelessWidget {
                         decoration: TextDecoration.none,
                         fontWeight: FontWeight.bold))),
           ),
+          showBackButton == true ? Positioned(
+            top: 0,
+            left: 0,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+              child: Image(
+                image: AssetImage("lib/assets/backbutton.png"),
+                height: 65,
+                width: 65,
+              ),
+            ),
+          ) : Container(),
           Positioned(
             top: 0,
             right: 0,
