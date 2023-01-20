@@ -96,7 +96,7 @@ class _MainPageState extends State<MainPage> {
       AnxietyMainPage(),
       CountDownTimer(),
       PositiveVibesPage(),
-      ImagesVibesPage(), // Add new page here
+      ImagesVibesPage(),// Add new page here
     ];
   }
 }

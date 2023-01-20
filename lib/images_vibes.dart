@@ -23,6 +23,12 @@ class ImagesVibesPageState extends State<ImagesVibesPage> {
     "lib/assets/relaximage4.jpg",
     "lib/assets/relaximage5.jpg",
     "lib/assets/relaximage6.jpg",
+    "lib/assets/background_image.png",
+    "lib/assets/anger.png",
+    "lib/assets/anger.png",
+    "lib/assets/anger.png",
+    "lib/assets/anger.png",
+    "lib/assets/anger.png",
   ];
 
   @override
