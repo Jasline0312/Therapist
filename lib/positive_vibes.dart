@@ -1,19 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:therapist/custom_app_bar.dart';
-import 'MainPage.dart';
 import 'components.dart';
-import 'emotional_guidance.dart';
+import 'sadness_main.dart';
+import 'package:therapist/MainPage.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class PositiveVibesPage extends StatefulWidget {
+  const PositiveVibesPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<PositiveVibesPage>createState() => _PositiveVibesPageState();
 }
 
 //set background image and buttons
-class _HomePageState extends State<HomePage> {
+class _PositiveVibesPageState extends State<PositiveVibesPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,34 +28,42 @@ class _HomePageState extends State<HomePage> {
             ),
             child: Column(
               children: [
-                CustomAppBar(
-                  title: 'My Journey',
-                ),
-                // Components.pageTitleHeader('My Journey'),
+                CustomAppBar(title: 'Positive Vibes'),
                 Expanded(
                   flex: 12,
                   child: SingleChildScrollView(
                     child: Column(children: [
-                      // Components.pageHeaderMenu(context, true),
-                      SizedBox(height: 25),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      SizedBox(height: 100),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                          Expanded(
+                            flex: 2,
                             child: GestureDetector(
                               onTap: () {
                                 Navigator.push(
                                   (context),
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const MainPage(pageIndex: 2)),
+                                      const MainPage(pageIndex: 11)),
                                 );
                               },
                               child: Image(
-                                image: AssetImage(
-                                    "lib/assets/emotional_guidance_button.png"),
-                                width: 180,
+                                image: AssetImage("lib/assets/images.png"),
+                                width: 160,
+                                height: 180,
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: () {
+                              },
+                              child: Image(
+                                image: AssetImage("lib/assets/quotes.png"),
+                                width: 160,
+                                height: 180,
                               ),
                             ),
                           ),
@@ -68,54 +76,29 @@ class _HomePageState extends State<HomePage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
-                              },
-                              child: Image(
-                                image: AssetImage("lib/assets/journal_button.png"),
-                                width: 180,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: GestureDetector(
-                              onTap: () {
-                              },
-                              child: Image(
-                                image: AssetImage("lib/assets/mood_chart_button.png"),
-                                width: 180,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Expanded(
-                            flex: 2,
-                            child: GestureDetector(
-                              onTap: () {
-                              },
-                              child: Image(
-                                image: AssetImage("lib/assets/self_reflective_button.png"),
-                                width: 180,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: GestureDetector(
-                              onTap: () {
                                 Navigator.push(
-                                  (context),
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                      const MainPage(pageIndex: 10)),
+                                    (context),
+                                    MaterialPageRoute(
+                                    builder: (context) =>
+                                const MainPage(pageIndex: 12)),
                                 );
                               },
                               child: Image(
-                                image: AssetImage("lib/assets/positive_vibes_button.png"),
-                                width: 180,
+                                image: AssetImage("lib/assets/videos.png"),
+                                width: 160,
+                                height: 180,
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: () {
+                              },
+                              child: Image(
+                                image: AssetImage("lib/assets/music.png"),
+                                width: 160,
+                                height: 180,
                               ),
                             ),
                           ),

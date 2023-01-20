@@ -4,6 +4,7 @@ import 'package:therapist/custom_app_bar.dart';
 import 'components.dart';
 import 'sadness_main.dart';
 import 'package:therapist/MainPage.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class EmotionalGuidancePage extends StatefulWidget {
   const EmotionalGuidancePage({Key? key}) : super(key: key);
@@ -28,13 +29,17 @@ class _EmotionalGuidancePageState extends State<EmotionalGuidancePage> {
             ),
             child: Column(
               children: [
-                CustomAppBar(title: 'Emotional Damange'),
+                CustomAppBar(title: 'Emotional Guidance'),
                 Expanded(
                   flex: 12,
                   child: SingleChildScrollView(
                     child: Column(children: [
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () async{
+                          final String url='https://maic.qld.gov.au/wp-content/uploads/2016/07/DASS-21.pdf';
+                            await launch(
+                                url);
+                        },
                         child: const Text(
                           'SELF TEST HERE ',
                           style: TextStyle(fontSize: 15),
@@ -57,7 +62,7 @@ class _EmotionalGuidancePageState extends State<EmotionalGuidancePage> {
                               child: Image(
                                 image: AssetImage("lib/assets/sadness.png"),
                                 width: 160,
-                                height: 160,
+                                height: 180,
                               ),
                             ),
                           ),
@@ -75,7 +80,7 @@ class _EmotionalGuidancePageState extends State<EmotionalGuidancePage> {
                               child: Image(
                                 image: AssetImage("lib/assets/fear.png"),
                                 width: 160,
-                                height: 160,
+                                height: 180,
                               ),
                             ),
                           ),
@@ -98,7 +103,7 @@ class _EmotionalGuidancePageState extends State<EmotionalGuidancePage> {
                               child: Image(
                                 image: AssetImage("lib/assets/anger.png"),
                                 width: 160,
-                                height: 160,
+                                height: 180,
                               ),
                             ),
                           ),
@@ -116,7 +121,7 @@ class _EmotionalGuidancePageState extends State<EmotionalGuidancePage> {
                               child: Image(
                                 image: AssetImage("lib/assets/depress.png"),
                                 width: 160,
-                                height: 160,
+                                height: 180,
                               ),
                             ),
                           ),
@@ -139,7 +144,7 @@ class _EmotionalGuidancePageState extends State<EmotionalGuidancePage> {
                               child: Image(
                                 image: AssetImage("lib/assets/stress.png"),
                                 width: 160,
-                                height: 160,
+                                height: 180,
                               ),
                             ),
                           ),
@@ -157,7 +162,7 @@ class _EmotionalGuidancePageState extends State<EmotionalGuidancePage> {
                               child: Image(
                                 image: AssetImage("lib/assets/anxiety.png"),
                                 width: 160,
-                                height: 160,
+                                height: 180,
                               ),
                             ),
                           ),

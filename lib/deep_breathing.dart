@@ -64,13 +64,14 @@ class _CountDownTimerState extends State<CountDownTimer>
                             child: Stack(
                               children: <Widget>[
                                 Positioned.fill(
+                                  child: Padding(padding: EdgeInsets.all(10.0),
                                   child: CustomPaint(
                                       painter: CustomTimerPainter(
                                         animation: controller,
                                         backgroundColor: Colors.white,
                                         color: Color.fromRGBO(247, 129, 90, 50),
                                       )),
-                                ),
+                                ),),
                                 Align(
                                   alignment: FractionalOffset.center,
                                   child: Column(
@@ -80,7 +81,7 @@ class _CountDownTimerState extends State<CountDownTimer>
                                     CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Text(
-                                        "Breath in and out every 10 seconds",
+                                        "Breath in and out every 5 seconds",
                                         style: TextStyle(
                                             fontSize: 15.0,
                                             color: Colors.black),
@@ -147,7 +148,7 @@ class CustomTimerPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
       ..color = backgroundColor
-      ..strokeWidth = 10.0
+      ..strokeWidth = 8.0
       ..strokeCap = StrokeCap.butt
       ..style = PaintingStyle.stroke;
 
