@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:therapist/MainPage.dart';
-import 'package:therapist/login.dart';
+import 'package:therapist/login_page.dart';
 import 'description_screen.dart';
 
 
@@ -11,12 +11,12 @@ void main() async {
 
   runApp(
       MaterialApp(
-        initialRoute: '/main',
+        initialRoute: '/login',
         debugShowCheckedModeBanner: false,
         routes: {
           '/':(context) =>const DescriptionScreen(),
           '/main' : (context) => const MainPage(),
-          '/login' : (context) => const Login(),
+          '/login' : (context) => const LoginPage(),
         },
       )
   );

@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:therapist/controllers/FirebaseAuthService.dart';
-import 'package:therapist/login.dart';
+import 'package:therapist/login_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -27,7 +27,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (_){
-                      return Login();
+                      return const LoginPage();
                     }
                   )
                 );

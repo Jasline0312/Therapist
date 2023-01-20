@@ -71,41 +71,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - lib/assets/splash_screen1.png
-     - lib/assets/splash_screen2.png
-     - lib/assets/splash_screen3.png
-     - lib/assets/background_image.png
-     - lib/assets/yes_button.png
-     - lib/assets/no_button.png
-     - lib/assets/exit_dialog.png
-     - lib/assets/quite_button.png
-     - lib/assets/next_button.png
-     - lib/assets/getstarted_button.png
-     - lib/assets/emotional_guidance_button.png
-     - lib/assets/journal_button.png
-     - lib/assets/mood_chart_button.png
-     - lib/assets/positive_vibes_button.png
-     - lib/assets/self_reflective_button.png
-     - lib/assets/anger.png
-     - lib/assets/anxiety.png
-     - lib/assets/depress.png
-     - lib/assets/stress.png
-     - lib/assets/fear.png
-     - lib/assets/sadness.png
-     - lib/assets/guidance_description.png
-     - lib/assets/understanding.png
-     - lib/assets/causes.png
-     - lib/assets/solutions.png
-     - lib/assets/images.png
-     - lib/assets/music.png
-     - lib/assets/quotes.png
-     - lib/assets/videos.png
-     - lib/assets/relaximage1.jpg
-     - lib/assets/relaximage2.jpg
-     - lib/assets/relaximage3.png
-     - lib/assets/relaximage4.jpg
-     - lib/assets/relaximage5.jpg
-     - lib/assets/relaximage6.jpg
+     - lib/assets/
 
   #   - images/a_dot_ham.jpeg
 
