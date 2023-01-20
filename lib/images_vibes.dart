@@ -23,12 +23,6 @@ class ImagesVibesPageState extends State<ImagesVibesPage> {
     "lib/assets/relaximage4.jpg",
     "lib/assets/relaximage5.jpg",
     "lib/assets/relaximage6.jpg",
-    "lib/assets/background_image.png",
-    "lib/assets/anger.png",
-    "lib/assets/anger.png",
-    "lib/assets/anger.png",
-    "lib/assets/anger.png",
-    "lib/assets/anger.png",
   ];
 
   @override
@@ -37,58 +31,58 @@ class ImagesVibesPageState extends State<ImagesVibesPage> {
       child: Scaffold(
         body: SizedBox.expand(
           child: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("lib/assets/background_image.png"),
-                  fit: BoxFit.cover,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("lib/assets/background_image.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Column(
+              children: [
+                CustomAppBar(title: 'Relaxing Images'),
+                Center(
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(height: 180),
+                          CarouselSlider.builder(
+                            itemCount: listPaths.length,
+                            options: CarouselOptions(
+                                autoPlay: true,
+                                enlargeCenterPage: true,
+                                viewportFraction: 0.8,
+                                onPageChanged: (index, reason) {
+                                  setState(() {
+                                    currentPos = index;
+                                  });
+                                }
+                            ),
+                            itemBuilder: (BuildContext,index,context){
+                              return MyImageView(listPaths[index]);
+                            },
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: listPaths.map((url) {
+                              int index = listPaths.indexOf(url);
+                              return Container(
+                                width: 8.0,
+                                height: 8.0,
+                                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: currentPos == index
+                                      ? Color.fromRGBO(0, 0, 0, 0.9)
+                                      : Color.fromRGBO(0, 0, 0, 0.4),
+                                ),
+                              );
+                            }).toList(),
+                          ),
+                        ]
+                    )
                 ),
-              ),
-              child: Column(
-                children: [
-                  CustomAppBar(title: 'Relaxing Images'),
-                  Center(
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(height: 180),
-                            CarouselSlider.builder(
-                              itemCount: listPaths.length,
-                              options: CarouselOptions(
-                                  autoPlay: true,
-                                  enlargeCenterPage: true,
-                                  viewportFraction: 0.8,
-                                  onPageChanged: (index, reason) {
-                                    setState(() {
-                                      currentPos = index;
-                                    });
-                                  }
-                              ),
-                              itemBuilder: (BuildContext,index,context){
-                                return MyImageView(listPaths[index]);
-                              },
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: listPaths.map((url) {
-                                int index = listPaths.indexOf(url);
-                                return Container(
-                                  width: 8.0,
-                                  height: 8.0,
-                                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: currentPos == index
-                                        ? Color.fromRGBO(0, 0, 0, 0.9)
-                                        : Color.fromRGBO(0, 0, 0, 0.4),
-                                  ),
-                                );
-                              }).toList(),
-                            ),
-                          ]
-                      )
-                  ),
-                ],
-              ),
+              ],
+            ),
           ),
         ),
       ),
