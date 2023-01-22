@@ -49,7 +49,7 @@ class _AnxietyMainPageState extends State< AnxietyMainPage> {
                                   (context),
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                      const MainPage(pageIndex: 9)),
+                                      const MainPage(pageIndex: 14)),
                                 );
                               },
                               child: Image(
@@ -64,14 +64,27 @@ class _AnxietyMainPageState extends State< AnxietyMainPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Image(
-                            image: AssetImage("lib/assets/causes.png"),
-                            width: 180,
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: () {
+                              },
+                              child: Image(
+                                image: AssetImage("lib/assets/causes.png"),
+                                width: 180,
+                              ),
+                            ),
                           ),
-                          Image(
-                            image:
-                            AssetImage("lib/assets/solutions.png"),
-                            width: 180,
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: () {
+                              },
+                              child: Image(
+                                image: AssetImage("lib/assets/solutions.png"),
+                                width: 180,
+                              ),
+                            ),
                           ),
                         ],
                       ),

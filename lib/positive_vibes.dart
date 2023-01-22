@@ -59,6 +59,12 @@ class _PositiveVibesPageState extends State<PositiveVibesPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 13)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/quotes.png"),
@@ -76,12 +82,6 @@ class _PositiveVibesPageState extends State<PositiveVibesPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.push(
-                                    (context),
-                                    MaterialPageRoute(
-                                    builder: (context) =>
-                                const MainPage(pageIndex: 13)),
-                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/videos.png"),

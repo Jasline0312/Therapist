@@ -48,7 +48,7 @@ class _FearMainPageState extends State<FearMainPage> {
                                   (context),
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                      const MainPage(pageIndex: 5)),
+                                      const MainPage(pageIndex: 9)),
                                 );
                               },
                               child: Image(
@@ -63,14 +63,27 @@ class _FearMainPageState extends State<FearMainPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Image(
-                            image: AssetImage("lib/assets/causes.png"),
-                            width: 180,
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: () {
+                              },
+                              child: Image(
+                                image: AssetImage("lib/assets/causes.png"),
+                                width: 180,
+                              ),
+                            ),
                           ),
-                          Image(
-                            image:
-                            AssetImage("lib/assets/solutions.png"),
-                            width: 180,
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: () {
+                              },
+                              child: Image(
+                                image: AssetImage("lib/assets/solutions.png"),
+                                width: 180,
+                              ),
+                            ),
                           ),
                         ],
                       ),

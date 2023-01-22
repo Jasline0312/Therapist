@@ -76,7 +76,13 @@ class _DashboardPageState extends State<DashboardPage> {
               child: const Text('Log out'),
               onPressed: () async {
                 await FirebaseAuthService.signOut(context);
-                getUsernameFromFirestore();
+                await getUsernameFromFirestore();
+                // if you want
+                MaterialPageRoute(
+                    builder: (context){
+                      return const LoginPage();
+                    }
+                );
               },
             ),
           ],

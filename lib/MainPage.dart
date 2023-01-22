@@ -12,6 +12,8 @@ import 'deep_breathing.dart';
 import 'package:therapist/positive_vibes.dart';
 import 'images_vibes.dart';
 import 'package:therapist/DashboardPage.dart';
+import 'positive_quotes.dart';
+import 'anxiety_definition.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -98,7 +100,9 @@ class _MainPageState extends State<MainPage> {
       CountDownTimer(),
       PositiveVibesPage(),
       ImagesVibesPage(),
-      DashboardPage(),// Add new page here
+      DashboardPage(),
+      PositiveQuotes(),
+      AnxietyDefinitionPage(),// Add new page here
     ];
   }
 }

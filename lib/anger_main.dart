@@ -50,7 +50,7 @@ class _AngerMainPageState extends State<AngerMainPage> {
                                   (context),
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                      const MainPage(pageIndex: 6)),
+                                      const MainPage(pageIndex: 9)),
                                 );
                               },
                               child: Image(
@@ -65,14 +65,27 @@ class _AngerMainPageState extends State<AngerMainPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Image(
-                            image: AssetImage("lib/assets/causes.png"),
-                            width: 180,
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: () {
+                              },
+                              child: Image(
+                                image: AssetImage("lib/assets/causes.png"),
+                                width: 180,
+                              ),
+                            ),
                           ),
-                          Image(
-                            image:
-                            AssetImage("lib/assets/solutions.png"),
-                            width: 180,
+                          Expanded(
+                            flex: 2,
+                            child: GestureDetector(
+                              onTap: () {
+                              },
+                              child: Image(
+                                image: AssetImage("lib/assets/solutions.png"),
+                                width: 180,
+                              ),
+                            ),
                           ),
                         ],
                       ),

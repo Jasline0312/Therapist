@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:therapist/sign_up_page.dart';
@@ -16,6 +17,23 @@ class _LoginPageState extends State<LoginPage> {
 
   TextEditingController emailTextEditController = TextEditingController();
   TextEditingController passwordTextEditController = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    //Navigate to MainPage if user already logged in
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      if(FirebaseAuth.instance.currentUser != null){
+        Navigator.pushReplacement(
+            context,
+            CupertinoPageRoute(
+                builder: (_) => const MainPage()
+            )
+        );
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -99,13 +117,16 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           onPressed: () async {
                             if(emailTextEditController.text.isNotEmpty && passwordTextEditController.text.isNotEmpty){
+                              showLoadingDialog();
                               String? result = await FirebaseAuthService.signIn(context, emailTextEditController.text, passwordTextEditController.text);
 
                               if(result != null){
+                                Navigator.of(context).pop();
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(content: Text(result))
                                 );
                               }else{
+                                Navigator.of(context).pop();
                                 Navigator.pushReplacement(
                                   context,
                                   CupertinoPageRoute(
@@ -145,6 +166,20 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     ),
+    );
+  }
+
+  Future showLoadingDialog() async {
+    await showDialog(
+      context: context,
+      builder: (_){
+        return SizedBox(
+          height: 30,
+          child: Center(
+            child: CircularProgressIndicator(),
+          ),
+        );
+      }
     );
   }
 }

@@ -24,7 +24,7 @@ class CustomAppBar extends StatelessWidget {
                 child: Text(title,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                        fontSize: 22,
+                        fontSize: 20,
                         color: Colors.black,
                         fontFamily: 'Lucida',
                         decoration: TextDecoration.none,

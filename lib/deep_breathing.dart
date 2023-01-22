@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:therapist/components.dart';
 import 'dart:math' as math;
+import 'custom_app_bar.dart';
 
 class CountDownTimer extends StatefulWidget {
   @override
@@ -124,7 +125,7 @@ class _CountDownTimerState extends State<CountDownTimer>
                     ],
                   ),
                 ),
-                Components.pageTitleHeader('Take a Deep Breath'),
+                CustomAppBar(title: 'Deep Breathing Exercise'),
                 Components.pageHeaderMenu(context, true),
               ],
             );
