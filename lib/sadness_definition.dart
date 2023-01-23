@@ -4,23 +4,22 @@ import 'package:therapist/custom_app_bar.dart';
 import 'components.dart';
 import 'package:therapist/MainPage.dart';
 
-class AnxietyDefinitionPage extends StatefulWidget {
+class SadnessDefinitionPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return AnxietyDefinitionPageState();
+    return
+      SadnessDefinitionPageState();
   }
 }
 
-class AnxietyDefinitionPageState extends State<AnxietyDefinitionPage> {
+class SadnessDefinitionPageState extends State<SadnessDefinitionPage> {
 
   int currentPos = 0;
   List<String> listPaths = [
-    "lib/assets/UnderstandingAnxiety1.png",
-    "lib/assets/UnderstandingAnxiety2.png",
-    "lib/assets/UnderstandingAnxiety3.png",
-    "lib/assets/UnderstandingAnxiety4.png",
-    "lib/assets/UnderstandingAnxiety5.png",
-    "lib/assets/UnderstandingAnxiety6.png",
+    "lib/assets/UnderstandingSadness1.png",
+    "lib/assets/UnderstandingSadness2.png",
+    "lib/assets/UnderstandingSadness3.png",
+    "lib/assets/UnderstandingSadness4.png",
   ];
 
   @override
@@ -61,12 +60,12 @@ class AnxietyDefinitionPageState extends State<AnxietyDefinitionPage> {
                                           color: Colors.white,
                                         ),
                                         style: ButtonStyle(
-                                          backgroundColor: MaterialStatePropertyAll(
-                                            Color.fromRGBO(247,129,90,50),
-                                          ),
-                                          shape: MaterialStatePropertyAll(
-                                              CircleBorder()
-                                          )
+                                            backgroundColor: MaterialStatePropertyAll(
+                                              Color.fromRGBO(247,129,90,50),
+                                            ),
+                                            shape: MaterialStatePropertyAll(
+                                                CircleBorder()
+                                            )
                                         ),
                                         onPressed: (){
                                           if(currentPos != 0){

@@ -14,6 +14,11 @@ import 'images_vibes.dart';
 import 'package:therapist/DashboardPage.dart';
 import 'positive_quotes.dart';
 import 'anxiety_definition.dart';
+import 'anxiety_causes.dart';
+import 'anxiety_solutions.dart';
+import 'sadness_definition.dart';
+import 'sadness_causes.dart';
+import 'sadness_solutions.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -102,7 +107,12 @@ class _MainPageState extends State<MainPage> {
       ImagesVibesPage(),
       DashboardPage(),
       PositiveQuotes(),
-      AnxietyDefinitionPage(),// Add new page here
+      AnxietyDefinitionPage(),
+      AnxietyCausesPage(),
+      AnxietySolutionsPage(),
+      SadnessDefinitionPage(),
+      SadnessCausesPage(),
+      SadnessSolutionsPage(),// Add new page here
     ];
   }
 }

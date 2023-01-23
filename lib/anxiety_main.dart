@@ -68,6 +68,12 @@ class _AnxietyMainPageState extends State< AnxietyMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 15)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/causes.png"),
@@ -79,6 +85,12 @@ class _AnxietyMainPageState extends State< AnxietyMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 16)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/solutions.png"),

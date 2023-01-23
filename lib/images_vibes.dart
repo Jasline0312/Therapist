@@ -50,7 +50,7 @@ class ImagesVibesPageState extends State<ImagesVibesPage> {
                             options: CarouselOptions(
                                 autoPlay: true,
                                 enlargeCenterPage: true,
-                                viewportFraction: 0.8,
+                                viewportFraction: 0.9,
                                 onPageChanged: (index, reason) {
                                   setState(() {
                                     currentPos = index;
@@ -66,8 +66,8 @@ class ImagesVibesPageState extends State<ImagesVibesPage> {
                             children: listPaths.map((url) {
                               int index = listPaths.indexOf(url);
                               return Container(
-                                width: 8.0,
-                                height: 8.0,
+                                width: 10.0,
+                                height: 10.0,
                                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,

@@ -4,23 +4,26 @@ import 'package:therapist/custom_app_bar.dart';
 import 'components.dart';
 import 'package:therapist/MainPage.dart';
 
-class AnxietyDefinitionPage extends StatefulWidget {
+class SadnessSolutionsPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return AnxietyDefinitionPageState();
+    return SadnessSolutionsPageState();
   }
 }
 
-class AnxietyDefinitionPageState extends State<AnxietyDefinitionPage> {
+class SadnessSolutionsPageState extends State<SadnessSolutionsPage> {
 
   int currentPos = 0;
   List<String> listPaths = [
-    "lib/assets/UnderstandingAnxiety1.png",
-    "lib/assets/UnderstandingAnxiety2.png",
-    "lib/assets/UnderstandingAnxiety3.png",
-    "lib/assets/UnderstandingAnxiety4.png",
-    "lib/assets/UnderstandingAnxiety5.png",
-    "lib/assets/UnderstandingAnxiety6.png",
+    "lib/assets/SolutionsSadness1.png",
+    "lib/assets/SolutionsSadness2.png",
+    "lib/assets/SolutionsSadness3.png",
+    "lib/assets/SolutionsSadness4.png",
+    "lib/assets/SolutionsSadness5.png",
+    "lib/assets/SolutionsSadness6.png",
+    "lib/assets/SolutionsSadness7.png",
+    "lib/assets/SolutionsSadness8.png",
+    "lib/assets/SolutionsSadness9.png",
   ];
 
   @override
@@ -38,7 +41,7 @@ class AnxietyDefinitionPageState extends State<AnxietyDefinitionPage> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  CustomAppBar(title: 'Understanding'),
+                  CustomAppBar(title: 'Solutions'),
                   Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -61,12 +64,12 @@ class AnxietyDefinitionPageState extends State<AnxietyDefinitionPage> {
                                           color: Colors.white,
                                         ),
                                         style: ButtonStyle(
-                                          backgroundColor: MaterialStatePropertyAll(
-                                            Color.fromRGBO(247,129,90,50),
-                                          ),
-                                          shape: MaterialStatePropertyAll(
-                                              CircleBorder()
-                                          )
+                                            backgroundColor: MaterialStatePropertyAll(
+                                              Color.fromRGBO(247,129,90,50),
+                                            ),
+                                            shape: MaterialStatePropertyAll(
+                                                CircleBorder()
+                                            )
                                         ),
                                         onPressed: (){
                                           if(currentPos != 0){
