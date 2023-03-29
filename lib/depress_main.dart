@@ -48,7 +48,7 @@ class _DepressMainPageState extends State<DepressMainPage> {
                                   (context),
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                      const MainPage(pageIndex: 9)),
+                                      const MainPage(pageIndex: 26)),
                                 );
                               },
                               child: Image(
@@ -67,6 +67,12 @@ class _DepressMainPageState extends State<DepressMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 27)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/causes.png"),
@@ -78,6 +84,12 @@ class _DepressMainPageState extends State<DepressMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 28)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/solutions.png"),

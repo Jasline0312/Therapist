@@ -48,7 +48,7 @@ class _FearMainPageState extends State<FearMainPage> {
                                   (context),
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                      const MainPage(pageIndex: 9)),
+                                      const MainPage(pageIndex: 20)),
                                 );
                               },
                               child: Image(
@@ -67,6 +67,12 @@ class _FearMainPageState extends State<FearMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 21)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/causes.png"),
@@ -78,6 +84,12 @@ class _FearMainPageState extends State<FearMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 22)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/solutions.png"),

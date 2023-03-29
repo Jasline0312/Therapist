@@ -50,7 +50,7 @@ class _AngerMainPageState extends State<AngerMainPage> {
                                   (context),
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                      const MainPage(pageIndex: 9)),
+                                      const MainPage(pageIndex: 23)),
                                 );
                               },
                               child: Image(
@@ -69,6 +69,12 @@ class _AngerMainPageState extends State<AngerMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 24)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/causes.png"),
@@ -80,6 +86,12 @@ class _AngerMainPageState extends State<AngerMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 25)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/solutions.png"),

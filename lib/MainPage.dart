@@ -19,6 +19,18 @@ import 'anxiety_solutions.dart';
 import 'sadness_definition.dart';
 import 'sadness_causes.dart';
 import 'sadness_solutions.dart';
+import 'fear_definition.dart';
+import 'fear_causes.dart';
+import 'fear_solutions.dart';
+import 'anger_definition.dart';
+import 'anger_causes.dart';
+import 'anger_solutions.dart';
+import 'depress_definition.dart';
+import 'depress_causes.dart';
+import 'depress_solutions.dart';
+import 'stress_definition.dart';
+import 'stress_causes.dart';
+import 'stress_solutions.dart';
 
 class MainPage extends StatefulWidget {
 
@@ -112,7 +124,20 @@ class _MainPageState extends State<MainPage> {
       AnxietySolutionsPage(),
       SadnessDefinitionPage(),
       SadnessCausesPage(),
-      SadnessSolutionsPage(),// Add new page here
+      SadnessSolutionsPage(),
+      FearDefinitionPage(),
+      FearCausesPage(),
+      FearSolutionsPage(),
+      AngerDefinitionPage(),
+      AngerCausesPage(),
+      AngerSolutionsPage(),
+      DepressDefinitionPage(),
+      DepressCausesPage(),
+      DepressSolutionsPage(),
+      StressDefinitionPage(),
+      StressCausesPage(),
+      StressSolutionsPage(),
+    // Add new page here
     ];
   }
 }

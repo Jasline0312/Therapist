@@ -48,7 +48,7 @@ class _StressMainPageState extends State<StressMainPage> {
                                   (context),
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                      const MainPage(pageIndex: 9)),
+                                      const MainPage(pageIndex: 29)),
                                 );
                               },
                               child: Image(
@@ -67,6 +67,12 @@ class _StressMainPageState extends State<StressMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 30)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/causes.png"),
@@ -78,6 +84,12 @@ class _StressMainPageState extends State<StressMainPage> {
                             flex: 2,
                             child: GestureDetector(
                               onTap: () {
+                                Navigator.push(
+                                  (context),
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                      const MainPage(pageIndex: 31)),
+                                );
                               },
                               child: Image(
                                 image: AssetImage("lib/assets/solutions.png"),
